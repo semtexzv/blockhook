@@ -1,0 +1,32 @@
+[package]
+name = "blockhook"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.69"
+
+web3 = { version = "0.18.0", features = ["reqwest", "http-rustls-tls", "ws-tls-tokio", "ws-tokio"] }
+
+axum = { version = "0.6.9", features = ["macros"] }
+axum-auth = "0.4.0"
+
+reqwest = { version = "0.11.14", features = ["rustls", "serde_json", "json"] }
+
+url = { version = "2.3.1", features = ["serde"] }
+uuid = { version = "1.3.0", features = ["serde"] }
+tokio = { version = "1.26.0", features = ["macros"] }
+futures = "0.3.26"
+
+tracing = "0.1.37"
+tracing-subscriber = "0.3.16"
+
+diesel = { version = "2.0.3", features = ["sqlite", "postgres", "r2d2", "numeric", "chrono", "bigdecimal"] }
+diesel-tokio = { git = "https://github.com/semtexzv/diesel-tokio", branch = "master" }
+diesel_migrations = "2.0.0"
+
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = "1.0.93"
+
+indexmap = "1.9.2"
+
